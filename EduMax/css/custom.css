@@ -1,18 +1,29 @@
+:root {
+    --primary-text: #ffffff;
+    --primary-bg: #3c9fc3;
+    --breadcrumb-text: #444444; /* Darker gray for better contrast */
+    --focus-color: #007bff; /* A more subtle focus color */
+    --focus-thickness: 3px;
+    --focus-offset: 2px;
+}
+
 .header {
-    background-color: #3c9fc3;
-    color: white;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 
 h1.header {
     font-size: 9vw;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     color: #7bd5d5;
 }
 
 form.register {
-    border: 1px solid #3c9fc3;
+    border: 1px solid var(--primary-bg); /* Consistent color */
     background-color: lightgrey;
     border-radius: 15px;
     padding: 15px;
@@ -26,4 +37,41 @@ form.register {
 .img:hover {
     width: 125px;
     height: 125px;
+}
+
+/* Improved Focus Indicator (WCAG 2.2 2.4.7) */
+:focus-visible {
+    outline: var(--focus-thickness) solid var(--focus-color) !important;
+    outline-offset: var(--focus-offset) !important;
+    box-shadow: 0 0 0 var(--focus-thickness) #ffffff,
+                0 0 0 calc(var(--focus-thickness) * 2) var(--focus-color);
+    border-radius: 5px;
+    clip-path: none !important;
+    overflow: visible !important;
+}
+
+:focus { /* For older browsers */
+    outline: var(--focus-thickness) solid var(--focus-color) !important;
+    outline-offset: var(--focus-offset) !important;
+    box-shadow: 0 0 0 var(--focus-thickness) #ffffff,
+                0 0 0 calc(var(--focus-thickness) * 2) var(--focus-color);
+    border-radius: 5px;
+    clip-path: none !important;
+    overflow: visible !important;
+}
+
+.img-link {
+    display: inline-block;
+}
+
+.img-link:focus-visible .img,
+.img-link:focus .img,
+.img-link:hover .img {
+    transform: scale(1.25);
+    outline: 2px solid var(--focus-color); /* Focus style for images */
+    border: 2px solid transparent;
+}
+
+.img {
+    transition: all 0.2s ease-in-out;
 }
