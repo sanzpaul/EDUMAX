@@ -1,10 +1,20 @@
+/* 
+
+Title: custom.css 
+Description: TMA01 - aba101 website mitigations changes to comply with WCAG 2.2 1.4.3 and 2.4.7 standards.
+Author: Paul Sanz - E5066358
+Module : TM252-25B 
+Date: 16th April 2025
+
+ */
+
 :root {
-    --primary-text: #ffffff;
-    --primary-bg: #3c9fc3;
-    --breadcrumb-text: #444444; /* Darker gray for better contrast */
-    --focus-color: #007bff; /* A more subtle focus color */
+    --primary-text: #FFFFFF;
+    --primary-bg: #307F9C; 
+    --focus-color: #ffc107; /* yellow */
     --focus-thickness: 3px;
     --focus-offset: 2px;
+    --header-text: #307F9C; /* conrast improvement */
 }
 
 .header {
@@ -14,12 +24,6 @@
 
 h1.header {
     font-size: 9vw;
-}
-
-h2,
-h3,
-h4 {
-    color: #7bd5d5;
 }
 
 form.register {
@@ -39,18 +43,20 @@ form.register {
     height: 125px;
 }
 
-/* Improved Focus Indicator (WCAG 2.2 2.4.7) */
-:focus-visible {
-    outline: var(--focus-thickness) solid var(--focus-color) !important;
-    outline-offset: var(--focus-offset) !important;
-    box-shadow: 0 0 0 var(--focus-thickness) #ffffff,
-                0 0 0 calc(var(--focus-thickness) * 2) var(--focus-color);
-    border-radius: 5px;
-    clip-path: none !important;
-    overflow: visible !important;
+/* WCAG 2.2 1.4.3 conrast improvement  */
+
+h2, h3, h4 {
+   color: var(--header-text) 
 }
 
-:focus { /* For older browsers */
+.navbar-nav .nav-link {
+    color: var(--primary-text); /*force nav link text color = white over lightgray for increased contrast with BG*/
+    
+}
+
+
+/* Improved Focus Indicator (WCAG 2.2 2.4.7) */
+:focus-visible {
     outline: var(--focus-thickness) solid var(--focus-color) !important;
     outline-offset: var(--focus-offset) !important;
     box-shadow: 0 0 0 var(--focus-thickness) #ffffff,
@@ -65,7 +71,6 @@ form.register {
 }
 
 .img-link:focus-visible .img,
-.img-link:focus .img,
 .img-link:hover .img {
     transform: scale(1.25);
     outline: 2px solid var(--focus-color); /* Focus style for images */
@@ -75,3 +80,38 @@ form.register {
 .img {
     transition: all 0.2s ease-in-out;
 }
+
+
+
+
+/* Template do not use 
+.header {
+    background-color: #3c9fc3;
+    color: white;
+}
+
+h1.header {
+    font-size: 9vw;
+}
+
+h2, h3, h4 {
+    color: #7bd5d5;
+}
+
+form.register {
+    border: 1px solid #3c9fc3;
+    background-color: lightgrey;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
+
+.img:hover {
+    width: 125px;
+    height: 125px;
+}
+*/

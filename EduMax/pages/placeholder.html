@@ -1,7 +1,19 @@
+<!-- 
+
+Title: custom.css 
+Description: TMA01 - aba101 website chnages 
+  - fixing a bug with the home link whjich fails to load page due file path errta <a class="nav-link" href="../index.html">Home</a>
+  - added css and html validator images at footer at row 6 of footer
+Author: Paul Sanz - E5066358
+Module : TM252-25B 
+Date: 16th April 2025
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>EduMax - template</title><!-- Edit for each new page created from this template -->
+    <title>EduMax - placeholder</title><!-- Edit for each new page created from this template -->
     <meta name="author" content="TM252 Module Team">
     <meta name="description" content="An online learning resource by students for students">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,7 +51,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div class="navbar-nav">
                             <!-- primary navigation -->
-                                <a class="nav-link" href="../index.html">Home</a>
+                                <a class="nav-link" href="./index.html">Home</a>  <!-- file path bug fix --> 
                                 <a class="nav-link" href="./placeholder.html">News</a>
                                 <a class="nav-link" href="./placeholder.html">Taster Modules</a>
                                 <a class="nav-link" href="./placeholder.html">Membership</a>
@@ -91,11 +103,17 @@
                         <a class="nav-link" href="./placeholder.html">Support</a>
                     </nav>
                 </div>
+            </div>
                 <div class="col text-end">
                     <!-- copyright notice -->
                     <p>&copy; EduMax 2024</p>
                 </div>
-            </div>
+                    <!-- Row 6 CSS Validator-->
+                    <div class="col text-end">     
+                        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                        </a>
+                    </div>    
         </footer>
     </div>
     <script src="../js/bootstrap.min.js"></script><!-- Bootstrap JavaScript -->
