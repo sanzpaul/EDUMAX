@@ -15,6 +15,7 @@ Date: 16th April 2025
     --focus-thickness: 3px;
     --focus-offset: 2px;
     --header-text: #307F9C; /* conrast improvement */
+    --bs-border-color: #307F9C;
 }
 
 .header {
@@ -54,7 +55,6 @@ h2, h3, h4 {
     
 }
 
-
 /* Improved Focus Indicator (WCAG 2.2 2.4.7) */
 :focus-visible {
     outline: var(--focus-thickness) solid var(--focus-color) !important;
@@ -81,8 +81,9 @@ h2, h3, h4 {
     transition: all 0.2s ease-in-out;
 }
 
-
-
+.border{ /* apply boarder widthg and colouring for consistency */
+  border-width: 3px !important;
+  border-color: var(--bs-border-color)!important;
 
 /* Template do not use 
 .header {
