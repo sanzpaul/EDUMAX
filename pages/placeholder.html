@@ -2,8 +2,11 @@
 
 Title: custom.css 
 Description: TMA01 - aba101 website chnages 
-  - fixing a bug with the home link whjich fails to load page due file path errta <a class="nav-link" href="../index.html">Home</a>
+  - fixing a bug with the home link which fails to load page due file path errta <a class="nav-link" href="../index.html">Home</a>
   - added css and html validator images at footer at row 6 of footer
+  - moved index.html to /root and chnages the corresonding files paths 
+  - Fixes breadcrumb-item bugs not showing current page or destination link
+  - 
 Author: Paul Sanz - E5066358
 Module : TM252-25B 
 Date: 16th April 2025
@@ -38,7 +41,7 @@ Date: 16th April 2025
                 </div>
                 <div class="col text-end">
                     <!-- login button -->
-                    <a class="btn btn-primary m-2" href="./registration.html" role="button">Login</a>
+                    <a class="btn btn-primary m-2" href="./placeholder.html" role="button">Login</a>
                 </div>
             </div>
             <!-- Row 2 -->
@@ -51,7 +54,7 @@ Date: 16th April 2025
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div class="navbar-nav">
                             <!-- primary navigation -->
-                                <a class="nav-link" href="./index.html">Home</a>  <!-- file path bug fix --> 
+                                <a class="nav-link" href="../index.html">Home</a>  <!-- file path bug fix --> 
                                 <a class="nav-link" href="./placeholder.html">News</a>
                                 <a class="nav-link" href="./placeholder.html">Taster Modules</a>
                                 <a class="nav-link" href="./placeholder.html">Membership</a>
@@ -74,7 +77,8 @@ Date: 16th April 2025
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <!-- breadcrumbs -->
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Placeholder</li>
                     </ol>
                 </nav>
             </div>
